@@ -26,33 +26,6 @@ class StockItemList extends Component {
     ];
   formatters = {};
 
-  data = [
-    {
-      "name": "Yoki",
-      "description": "woof",
-      "stock": "1",
-      "unitPrice": "priceless",
-      "picture": "dog.jpeg",
-      "manufacturer": "cute"
-    },
-    {
-      "name": "Yoki",
-      "description": "ark",
-      "stock": "1",
-      "unitPrice": "priceless",
-      "picture": "arki.jpeg",
-      "manufacturer": "kebukai"
-    },
-    {
-      "name": "Yoki",
-      "description": "good girl",
-      "stock": "1",
-      "unitPrice": "priceless",
-      "picture": "pupper.jpeg",
-      "manufacturer": "pretty"
-    }
-  ];
-
   constructor(props) {
     super(props);
     this.state = {
@@ -64,7 +37,7 @@ class StockItemList extends Component {
   async componentDidMount() {
 
     this.setState({
-      data: this.data,
+      data: await this.props.stockService.listStockItems(),
     })
   }
 
