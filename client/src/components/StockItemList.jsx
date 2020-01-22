@@ -13,40 +13,43 @@ import Header from "../pattern-components/Header";
 import "../pattern-components/patterns.scss";
 
 class StockItemList extends Component {
-  title = 'Table List';
-  subtitle = 'This pattern will display and array of model objects in a multi column grid/table.';
+  title = 'Stock Items';
+  subtitle = 'This is the current inventory of items';
 
-  columns = ['Name', 'Address', 'City', 'State', 'ZipCode', 'Country'];
-  formatters = {
-    'ZipCode': function(val) {
-      return val + '-0000';
-    }
-  };
+  columns = [
+      "name",
+      "description",
+      "stock",
+      "unitPrice",
+      "picture",
+      "manufacturer"
+    ];
+  formatters = {};
 
   data = [
     {
-      Name: "Lin",
-      Address: "123 Main Street",
-      City: "Austin",
-      State: "TX",
-      ZipCode: "12345",
-      Country: "United States"
+      "name": "Yoki",
+      "description": "woof",
+      "stock": "1",
+      "unitPrice": "priceless",
+      "picture": "dog.jpeg",
+      "manufacturer": "cute"
     },
     {
-      Name: "Mak",
-      Address: "45 2nd Street",
-      City: "Austin",
-      State: "TX",
-      ZipCode: "78766",
-      Country: "United States"
+      "name": "Yoki",
+      "description": "ark",
+      "stock": "1",
+      "unitPrice": "priceless",
+      "picture": "arki.jpeg",
+      "manufacturer": "kebukai"
     },
     {
-      Name: "Joe",
-      Address: "40 Down Street",
-      City: "San Francisco",
-      State: "CA",
-      ZipCode: "90706",
-      Country: "United States"
+      "name": "Yoki",
+      "description": "good girl",
+      "stock": "1",
+      "unitPrice": "priceless",
+      "picture": "pupper.jpeg",
+      "manufacturer": "pretty"
     }
   ];
 
